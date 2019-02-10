@@ -26,13 +26,14 @@ class IdentifierFSM
 		return false;
 	}
 
-	bool isStringStarted = false;
+	bool isStringStarted;
 	bool isString(char d)
 	{
 		if (d == '\"')
 		{
 			isStringStarted = !isStringStarted;
 		}
+		return isStringStarted;
 	}
 
 public:
